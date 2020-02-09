@@ -68,4 +68,4 @@ function extra_feed_links_extra( $args = array() ) {
 		}
 	}
 }
-add_filter( 'wp_head', 'extra_feed_links_extra' );
+add_action( 'wp_head', 'extra_feed_links_extra' );
