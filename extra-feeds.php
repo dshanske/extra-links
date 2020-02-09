@@ -44,20 +44,6 @@ function extra_feed_links_extra( $args = array() ) {
 	if ( is_single() ) {
 		$id         = 0;
 		$post       = get_post( $id );
-		$categories = get_the_category( $post->ID );
-		foreach ( $categories as $category ) {
-			$feeds[] = array(
-				'title' => sprintf( $args['cattitle'], get_bloginfo( 'name' ), $args['separator'], $category->name ),
-				'href'  => get_category_feed_link( $category->term_id, EXTRA_LINKS_FEED ),
-			);
-		}
-		$tags = get_the_tags( $post->ID );
-		foreach ( $tags as $tag ) {
-			$feeds[] = array(
-				'title' => sprintf( $args['tagtitle'], get_bloginfo( 'name' ), $args['separator'], $tag->name ),
-				'href'  => get_tag_feed_link( $tag->term_id, EXTRA_LINKS_FEED ),
-			);
-		}
 		$taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
 		foreach ( $taxonomies as $taxonomy_slug => $tax ) {
 			$terms = get_the_terms( $post->ID, $taxonomy_slug );
