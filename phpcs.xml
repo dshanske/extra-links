@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="Extra Feeds For WordPress">
+	<description>Extra Feeds for WordPress Standards</description>
+
+	<file>./extra-feeds.php</file>
+	<rule ref="PHPCompatibility"/>
+	<config name="testVersion" value="5.4-"/>
+	<rule ref="WordPress-Core" />	
+	<config name="minimum_supported_wp_version" value="4.9"/>
+	<rule ref="WordPress.Files.FileName" />
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress.WP.I18n"/>
+	<config name="text_domain" value="extra-feeds,default"/>
+	 <rule ref="WordPress.WP.DeprecatedFunctions" />
+
+</ruleset>
