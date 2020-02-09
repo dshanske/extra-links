@@ -41,7 +41,7 @@ function extra_feed_links_extra( $args = array() ) {
 	);
 	$args     = wp_parse_args( $args, $defaults );
 	$feeds    = array();
-	if ( is_singular() ) {
+	if ( is_single() ) {
 		$id         = 0;
 		$post       = get_post( $id );
 		$categories = get_the_category( $post->ID );
